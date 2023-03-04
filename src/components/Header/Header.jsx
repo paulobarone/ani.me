@@ -14,7 +14,7 @@ function Header() {
         })}
       </ul>
       <input placeholder="Buscar" />
-      <div className={styles.button_container}>
+      <div className={styles.buttonContainer}>
         <img src={search} alt="Botão de pesquisa" className="search" />
         <img src={menu} alt="Menu" className="menu" />
       </div>
