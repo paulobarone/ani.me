@@ -1,0 +1,25 @@
+@import 'styles/variables.scss';
+
+.cardContainer {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 160px;
+  position: relative;
+  content: '';
+
+  .card {
+    width: 100%;
+    height: 240px;
+    background: $card-gradient, url('./img.png') center / cover no-repeat;
+    margin-bottom: 8px;
+    border-radius: 12px;
+
+    p {
+      position: absolute;
+      bottom: 37px;
+      left: 40px;
+    }
+  }
+}

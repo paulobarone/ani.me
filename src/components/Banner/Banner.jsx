@@ -2,7 +2,7 @@ import styles from './Banner.module.scss';
 
 function Banner() {
   return (
-    <section className={styles.section}>
+    <section className={styles.bannerContainer}>
       <div className={styles.textGroup}>
         <h2>Últimas novidades</h2>
         <p>O que você vai assistir hoje?</p>
