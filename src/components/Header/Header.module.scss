@@ -1,0 +1,25 @@
+@import '../../styles/variables.scss';
+
+header {
+  padding: 24px 10%;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+
+  ul, input {
+    display: none;
+  }
+
+  .logo {
+    font-size: 24px;
+    font-weight: 500;
+    color: $blue;
+  }
+
+  .button_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+  }
+}
