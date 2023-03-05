@@ -8,9 +8,15 @@
 
   ul, input {
     display: none;
+
+    
+    li {
+      cursor: pointer;
+    }
   }
 
   .logo {
+    cursor: pointer;
     font-size: 24px;
     font-weight: 500;
     color: $blue;
@@ -21,5 +27,9 @@
     align-items: center;
     justify-content: center;
     gap: 32px;
+
+    img {
+      cursor: pointer;
+    }
   }
 }

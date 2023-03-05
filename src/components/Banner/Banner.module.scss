@@ -18,7 +18,7 @@
     background: $banner-gradient, url('./one-punch-man.png') 40% / cover no-repeat;
     border-radius: 8px;
     position: relative;
-    content: '';
+    cursor: pointer;
 
     .bannerTextGroup {
       position: absolute;

@@ -4,7 +4,7 @@ import search from './search.svg';
 
 function Header() {
   const navItems = ['Início', 'Lista', 'Gêneros', 'Novos episódios'];
-
+  
   return (
     <header className={styles.header}>
       <h1 className={styles.logo}>Ani.me</h1>
