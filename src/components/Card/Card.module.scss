@@ -11,13 +11,16 @@
   .card {
     width: 100%;
     height: 240px;
-    background: $card-gradient, url('./img.png') center / cover no-repeat;
     margin-bottom: 8px;
     border-radius: 12px;
 
     display: flex;
     justify-content: center;
     position: relative;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 
     p {
       position: absolute;
