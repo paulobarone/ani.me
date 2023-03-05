@@ -1,0 +1,16 @@
+@import 'styles/variables.scss';
+
+.footer {
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  p {
+    font-family: $font-secundary;
+    font-size: 14px;
+    text-align: center;
+    color: $gray;
+    line-height: 22px;
+  }
+}
