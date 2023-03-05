@@ -1,6 +1,6 @@
 @import 'styles/variables.scss';
 
-.recentContainer {
+.updateContainer {
   padding: 42px 6%;
 
   h3 {
@@ -21,7 +21,7 @@
 }
 
 @media (min-width: 678px) {
-  .recentContainer > ul {
+  .updateContainer > ul {
     grid-template-columns: repeat(3, 160px);
     column-gap: calc((100% - (160px * 3))/2);
   }
