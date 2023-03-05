@@ -1,7 +1,7 @@
 @import 'styles/variables.scss';
 
 .recentContainer {
-  padding: 42px 10%;
+  padding: 42px 6%;
 
   h3 {
     color: $white;
@@ -14,8 +14,8 @@
 
   ul {
     display: grid;
-    grid-template-columns: repeat(2, 160px);
-    column-gap: calc(100% - (160px * 2));
+    grid-template-columns: repeat(2, 144px);
+    column-gap: calc(100% - (144px * 2));
     row-gap: 32px;
   }
 }
