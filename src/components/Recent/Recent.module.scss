@@ -1,0 +1,29 @@
+@import 'styles/variables.scss';
+
+.recentContainer {
+  padding: 42px 6%;
+
+  h3 {
+    color: $white;
+    margin-bottom: 28px;
+  }
+
+  p {
+    color: $white;
+  }
+
+  ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, 144px);
+    column-gap: calc(100% - (144px * 2));
+    row-gap: 32px;
+  }
+}
+
+@media (min-width: 678px) {
+  .updateContainer > ul {
+    grid-template-columns: repeat(3, 160px);
+    column-gap: calc((100% - (160px * 3))/2);
+  }
+}

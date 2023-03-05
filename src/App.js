@@ -2,6 +2,7 @@ import './styles/global-styles.scss';
 import Header from "components/Header/Header";
 import Banner from "components/Banner/Banner";
 import Update from "components/Update/Update";
+import Recent from 'components/Recent/Recent';
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <Header />
       <Banner />
       <Update />
+      <Recent />
     </>
   );
 }
