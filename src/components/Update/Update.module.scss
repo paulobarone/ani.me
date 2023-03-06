@@ -26,4 +26,8 @@
     grid-template-columns: repeat(3, 160px);
     column-gap: calc((100% - (160px * 3))/2);
   }
+
+  ul > a > li:nth-child(2) {
+    transform: scale(3);
+  }
 }

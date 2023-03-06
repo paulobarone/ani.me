@@ -3,9 +3,9 @@ import search from './search.svg';
 import menuClose from './menuClose.svg';
 import menuOpen from './menuOpen.svg';
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
-function Header() {
-  const navItems = ['Início', 'Lista', 'Gêneros', 'Novos episódios'];
+function Header()  {
   const [active, setMode] = useState(false);
 
   const toggleMode = () => {
@@ -22,9 +22,10 @@ function Header() {
       <h1 className={styles.logo}>Ani.me</h1>
       <div className={active ? styles.listContainerActive : styles.listContainer}>
         <ul className={active ? styles.listActive : styles.list}>
-          {navItems.map((item, key) => {
-            return <li key={key}>{item}</li>
-          })}
+          <Link to="/"><li>Início</li></Link>
+          <Link to="/"><li>Lista</li></Link>
+          <Link to="/"><li>Gêneros</li></Link>
+          <Link to="/"><li>Novos episódios</li></Link>
         </ul>
       </div>
       <input placeholder="Buscar" />

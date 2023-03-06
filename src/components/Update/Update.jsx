@@ -1,22 +1,26 @@
-import useFetch from 'hooks/useFetch';
 import Card from 'components/Card/Card';
 import Button from 'components/Button/Button';
 import styles from './Update.module.scss';
+import MyContext from 'contexts/MyContext';
+import filteredData from 'utils/filteredData';
+import { useContext } from 'react';
 
 function Update() {
-  const { data: update, isFetching } = useFetch('8d49ec0d0e62b5b143b0c5f4c1b022ae/raw/b9c2141df2f0d78f687d17433060c7ff36cd52b6/animeUpdateDB.json');
+  const { data, isFetching } = useContext(MyContext);
+  const dataFiltered = !isFetching && filteredData(data, 'update');
 
   return (
     <section className={styles.updateContainer}>
       <h3>Últimas atualizações</h3>
       <ul>
         { isFetching && <p>Carregando...</p> }
-        { !isFetching && update.map((item) => {
+        { !isFetching && dataFiltered.map((card) => {
           return <Card 
-            key={item.id}
-            title={item.title}
-            cape={item.cape}
-            episode={item.episode}
+            title={card.title}
+            cape={card.cape}
+            episode={card.episode}
+            path={card.path}
+            key={card.path}
           />
         }) }
       </ul>
