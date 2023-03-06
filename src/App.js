@@ -1,19 +1,16 @@
 import './styles/global-styles.scss';
 import Header from "components/Header/Header";
-import Banner from "components/Banner/Banner";
-import Update from "components/Update/Update";
-import Recent from 'components/Recent/Recent';
-import Footer from 'components/Footer/Footer';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from 'pages/Home';
 
 function App() {
   return (
-    <>
+    <Router>
       <Header />
-      <Banner />
-      <Update />
-      <Recent />
-      <Footer />
-    </>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </Router>
   );
 }
 
