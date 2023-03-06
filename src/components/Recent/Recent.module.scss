@@ -22,7 +22,7 @@
 }
 
 @media (min-width: 678px) {
-  .updateContainer > ul {
+  .recentContainer > ul {
     grid-template-columns: repeat(3, 160px);
     column-gap: calc((100% - (160px * 3))/2);
   }
