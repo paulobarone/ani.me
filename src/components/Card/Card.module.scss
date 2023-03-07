@@ -8,31 +8,35 @@
   width: 144px;
   position: relative;
 
-  .card {
-    cursor: pointer;
+  a {
     width: 100%;
-    height: 240px;
-    margin-bottom: 8px;
-    border-radius: 12px;
 
-    display: flex;
-    justify-content: center;
-    position: relative;
-
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-
-    p {
-      position: absolute;
-      bottom: 15px;
-      font-family: $font-secundary;
+    .card {
+      cursor: pointer;
+      width: 100%;
+      height: 240px;
+      margin-bottom: 8px;
+      border-radius: 12px;
+  
+      display: flex;
+      justify-content: center;
+      position: relative;
+  
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+  
+      p {
+        position: absolute;
+        bottom: 15px;
+        font-family: $font-secundary;
+      }
     }
-  }
-
-  p {
-    cursor: pointer;
-    text-align: center;
+  
+    p {
+      cursor: pointer;
+      text-align: center;
+    }
   }
 }
 

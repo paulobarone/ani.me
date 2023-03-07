@@ -3,8 +3,8 @@ import styles from './Card.module.scss';
 
 function Card(props) {
   return (
-    <Link className={styles.cardLink} to={props.path}>
-      <li className={styles.cardContainer}>
+    <li className={styles.cardContainer}>
+      <Link className={styles.cardLink} to={props.path}>
         <div 
           className={styles.card} 
           style={{ 
@@ -13,8 +13,8 @@ function Card(props) {
         <p>Episódio {props.episode}</p>
         </div>
         <p>{props.title}</p>
-      </li>
-    </Link>
+      </Link>
+    </li>
   );
 }
 

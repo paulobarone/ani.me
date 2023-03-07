@@ -6,33 +6,61 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 function Header()  {
-  const [active, setMode] = useState(false);
+  const [menuActive, setMode] = useState(false);
+  const [showSearchInput, setShowSearchInput] = useState(false);
 
-  const toggleMode = () => {
-    setMode(!active);
+  const navBarItems = ['Início', 'Lista', 'Gêneros', 'Novos episódios'];
+
+  const handleToggleSearch = () => {
+    setShowSearchInput(prevState => !prevState);
+  }
+
+  const toggleMenuMode = () => {
+    setMode(!menuActive);
     window.scrollTo(0, 0);
   }
 
   useEffect(() => {
-    document.body.style.overflowY = active ? 'hidden' : 'auto';
-  }, [active]);
+    document.body.style.overflowY = menuActive ? 'hidden' : 'auto';
+  }, [menuActive]);
 
   return (
     <header className={styles.header}>
-      <h1 className={styles.logo}>Ani.me</h1>
-      <div className={active ? styles.listContainerActive : styles.listContainer}>
-        <ul className={active ? styles.listActive : styles.list}>
-          <Link to="/"><li>Início</li></Link>
-          <Link to="/"><li>Lista</li></Link>
-          <Link to="/"><li>Gêneros</li></Link>
-          <Link to="/"><li>Novos episódios</li></Link>
-        </ul>
+      <div className={styles.topDiv}>
+        <h1 className={styles.logo}>Ani.me</h1>
+        <div className={menuActive ? styles.listContainerActive : styles.listContainer}>
+          <ul className={menuActive ? styles.listActive : styles.list}>
+            {navBarItems.map(item => {
+              return <Link to="/" onClick={toggleMenuMode}>
+                <li>{item}</li>
+              </Link>
+            })}
+          </ul>
+        </div>
+        <div className={styles.buttonContainer}>
+          <img 
+            src={search}
+            alt="Botão de pesquisa"
+            onClick={handleToggleSearch}
+          />
+          <img 
+            src={menuActive ? menuClose : menuOpen}
+            className={styles.menu}
+            alt="Menu"
+            onClick={toggleMenuMode}
+          />
+        </div>
       </div>
-      <input placeholder="Buscar" />
-      <div className={styles.buttonContainer}>
-        <img src={search} alt="Botão de pesquisa" />
-        <link></link><img src={active ? menuClose : menuOpen} alt="Menu" className={styles.menu} onClick={toggleMode}/>
-      </div>
+      { showSearchInput &&
+        <div className={styles.inputContainerMobile}>
+          <input 
+            type="text" 
+            id="searchInput" 
+            placeholder="Buscar"
+            autoFocus
+          />
+        </div>
+      }
     </header>
   );
 }

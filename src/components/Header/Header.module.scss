@@ -3,30 +3,63 @@
 .header {
   padding: 24px 6%;
   display: flex;
-  justify-content: space-between;
-  text-align: center;
+  flex-direction: column;
+  gap: 20px;
 
-  .listContainerActive {
-    transition: 1s;
-    opacity: 0.9;
-
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-
-    width: 100%;
-    height: 100vh;
-
-    background: rgb(0,0,0);
-    background: linear-gradient(45deg, rgba(0,163,255,0.9) 0%, rgba(0,0,0,0.95) 100%);
-    backdrop-filter: blur(3px);
-    z-index: 5;
-
+  .topDiv {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    text-align: center;
+
+    .listContainer {
+      ul, input {
+        display: none;
+      }
+    }
+
+    .listContainerActive {
+      transition: 1s;
+      opacity: 0.9;
+
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+
+      width: 100%;
+      height: 100vh;
+
+      background: rgb(0,0,0);
+      background: linear-gradient(45deg, rgba(0,163,255,0.9) 0%, rgba(0,0,0,0.95) 100%);
+      backdrop-filter: blur(3px);
+      z-index: 5;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .inputContainerMobile {
+    transition: 0.5s;
+
+    input {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      outline: none;
+      color: $white;
+      background-color: $dark;
+      border: 2px solid $blue;
+    }
+
+    input::placeholder {
+      color: $white;
+    }
+
+
   }
 
   .listActive {
@@ -42,10 +75,6 @@
       font-size: 18px;
       cursor: pointer;
     }
-  }
-
-  ul, input {
-    display: none;
   }
 
   .logo {
