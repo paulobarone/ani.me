@@ -4,7 +4,7 @@ import styles from './Card.module.scss';
 function Card(props) {
   const navigate = useNavigate();
   function redirectAnime(anime) {
-    navigate(`/anime/${anime.path}`, { state: { anime } })
+    navigate(`${anime.path}`, { state: { anime } })
   }
 
   return (

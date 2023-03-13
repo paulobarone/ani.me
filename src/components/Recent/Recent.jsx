@@ -2,7 +2,7 @@ import Card from 'components/Card/Card';
 import styles from './Recent.module.scss';
 import { useContext } from 'react';
 import MyContext from 'contexts/MyContext';
-import filteredData from 'utils/filteredData';
+import filteredData from 'utils/filteredDataType';
 
 function Recent() {
   const { data, isFetching } = useContext(MyContext);

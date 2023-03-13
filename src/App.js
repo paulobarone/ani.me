@@ -15,7 +15,7 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/anime/:path" element={<Anime />} />
+          <Route path="/:path" element={<Anime />} />
         </Routes>
       </Router>
     </MyContext.Provider>

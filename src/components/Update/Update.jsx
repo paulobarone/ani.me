@@ -2,12 +2,12 @@ import Card from 'components/Card/Card';
 import Button from 'components/Button/Button';
 import styles from './Update.module.scss';
 import MyContext from 'contexts/MyContext';
-import filteredData from 'utils/filteredData';
+import filteredDataType from 'utils/filteredDataType';
 import { useContext } from 'react';
 
 function Update() {
   const { data, isFetching } = useContext(MyContext);
-  const dataFiltered = !isFetching && filteredData(data, 'update');
+  const dataFiltered = !isFetching && filteredDataType(data, 'update');
 
   return (
     <section className={styles.updateContainer}>

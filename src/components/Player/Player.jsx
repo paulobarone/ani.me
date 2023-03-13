@@ -1,10 +1,13 @@
 import styles from './Player.module.scss';
 import playerButton from './player-button.svg'
-import { useLocation } from 'react-router-dom';
+import MyContext from 'contexts/MyContext';
+import { useContext } from 'react';
+import filteredDataPath from 'utils/filteredDataPath';
+
 
 function Player() {
-  const { state } = useLocation();
-  const { anime } = state;
+  const { data, isFetching } = useContext(MyContext);
+  const anime = !isFetching && filteredDataPath(data, window.location.pathname.substring(1));
 
   return (
     <div className={styles.playerContainer}>

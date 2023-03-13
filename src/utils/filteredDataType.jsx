@@ -1,8 +1,8 @@
-function filteredData(data, type) {
+function filteredDataType(data, type) {
   let result = [];
   data.filter((item) => item.type === type ? result.push(item) : []);
 
   return result
 }
 
-export default filteredData;
+export default filteredDataType;

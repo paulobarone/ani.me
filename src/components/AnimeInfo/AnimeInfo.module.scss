@@ -1,0 +1,41 @@
+@import 'styles/variables.scss';
+
+.animeInfoContainer {
+  display: flex;
+  justify-content: space-between;
+  padding: 24px 6%;
+
+  .animeInfo {
+    color: $gray;
+  }
+
+  .animeInfoName {
+    color: $white;
+  }
+
+  .animeGenreList {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    align-items: center;
+    color: $white;
+    margin-bottom: 30px;
+
+    .animeGenreItems {
+      cursor: pointer;
+      padding: 5px;
+      color: $gray;
+      background-color: $dark-200;
+    }
+  }
+
+  .animeCape {
+    display: none;
+  }
+}
+
+@media (min-width: 1280px) {
+  .animeCape {
+    display: block;
+  }
+}
