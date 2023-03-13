@@ -8,35 +8,31 @@
   width: 144px;
   position: relative;
 
-  a {
+  .card {
+    cursor: pointer;
     width: 100%;
+    height: 240px;
+    margin-bottom: 8px;
+    border-radius: 12px;
 
-    .card {
-      cursor: pointer;
-      width: 100%;
-      height: 240px;
-      margin-bottom: 8px;
-      border-radius: 12px;
-  
-      display: flex;
-      justify-content: center;
-      position: relative;
-  
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-  
-      p {
-        position: absolute;
-        bottom: 15px;
-        font-family: $font-secundary;
-      }
-    }
-  
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
     p {
-      cursor: pointer;
-      text-align: center;
+      position: absolute;
+      bottom: 15px;
+      font-family: $font-secundary;
     }
+  }
+
+  p {
+    cursor: pointer;
+    text-align: center;
   }
 }
 

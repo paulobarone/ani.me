@@ -8,7 +8,6 @@ import { Link } from 'react-router-dom';
 function Header()  {
   const [menuActive, setMode] = useState(false);
   const [showSearchInput, setShowSearchInput] = useState(false);
-
   const navBarItems = ['Início', 'Lista', 'Gêneros', 'Novos episódios'];
 
   const handleToggleSearch = () => {
@@ -27,13 +26,15 @@ function Header()  {
   return (
     <header className={styles.header}>
       <div className={styles.topDiv}>
-        <h1 className={styles.logo}>Ani.me</h1>
+        <Link to='/'><h1 className={styles.logo}>Ani.me</h1></Link>
         <div className={menuActive ? styles.listContainerActive : styles.listContainer}>
           <ul className={menuActive ? styles.listActive : styles.list}>
-            {navBarItems.map(item => {
-              return <Link to="/" onClick={toggleMenuMode}>
-                <li>{item}</li>
-              </Link>
+            {navBarItems.map((item, key) => {
+              return (
+                <Link key={key} to="/" onClick={toggleMenuMode}>
+                  <li>{item}</li>
+                </Link>
+              )
             })}
           </ul>
         </div>

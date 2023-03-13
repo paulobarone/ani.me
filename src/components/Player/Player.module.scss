@@ -1,0 +1,21 @@
+@import 'styles/variables.scss';
+
+.playerContainer {
+  padding: 24px 6%;
+
+  .playerTitle {
+    font-weight: 500;
+    color: $white;
+    margin-bottom: 24px;
+  }
+
+  .playerBackground {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 160px;
+    background-color: black;
+  }
+}
