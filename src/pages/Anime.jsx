@@ -1,4 +1,5 @@
 import AnimeInfo from "components/AnimeInfo/AnimeInfo";
+import Comentarios from "components/Comentarios/Comentarios";
 import Player from "components/Player/Player";
 
 function Anime() {
@@ -6,6 +7,7 @@ function Anime() {
     <>
       <Player />
       <AnimeInfo />
+      <Comentarios />
     </>
   )
 }
